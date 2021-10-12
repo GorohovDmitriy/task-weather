@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import PropTypes from 'prop-types'
 
 import { API_KEY } from '../../API'
 import TempDay from '../TempDay/TempDay'
@@ -71,6 +72,14 @@ function SearchWeather() {
 			</div>
 		</div>
 	)
+}
+
+SearchWeather.propTypes = {
+	query: PropTypes.string.isRequired,
+	seacrchCity: PropTypes.object.isRequired,
+	weatherDay: PropTypes.object.isRequired,
+	isLoaded: PropTypes.bool.isRequired,
+	fetchSearch: PropTypes.func.isRequired,
 }
 
 export default SearchWeather

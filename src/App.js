@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import PropTypes from 'prop-types';
 
 import CartWeather from './components/CartWeather/CartWeather'
 import { Switch, Route } from 'react-router-dom'
@@ -62,6 +63,15 @@ function App() {
 			</Route>
 		</div>
 	)
+}
+
+App.propTypes = {
+	currentWeather: PropTypes.object,
+	weatherBratislava: PropTypes.object,
+	weatherMoscow: PropTypes.object,
+	weatherMinsk: PropTypes.object,
+	isLoading: PropTypes.bool.isRequired
+
 }
 
 export default App

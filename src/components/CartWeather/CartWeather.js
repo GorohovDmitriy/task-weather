@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 import { getDate } from '../../dataDate'
 import Loading from '../Loading/Loading'
@@ -107,6 +108,15 @@ const CartWeather = ({
 			)}
 		</div>
 	)
+}
+
+
+CartWeather.propTypes = {
+	selectCity: PropTypes.number.isRequired,
+	toggleMinsk: PropTypes.func.isRequired,
+	toggleMoscow: PropTypes.func.isRequired,
+	toggleBratislava: PropTypes.func.isRequired,
+
 }
 
 export default CartWeather
